@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+
+<app-colorpicker (colorJson)="carregarColor($event)" (colorRgb)="carregarColorRgb($event)"></app-colorpicker>
+
+<div [ngStyle]="{'background-color': colorRgb}">
+	{{colorJson}}
+</div>
